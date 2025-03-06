@@ -6,6 +6,10 @@ module.exports = {
       center: true,
     },
     extend: {
+      backgroundImage: {
+        'qc_pattern': "url('/assets/images/footer-pattern.png')",
+      },
+
       colors: {
         gc_primary_100: "#bacff4",
         gc_primary_200: "#99b8ef",

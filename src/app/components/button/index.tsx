@@ -3,9 +3,14 @@ import React from "react";
 interface IButtonProps {
   text: string;
   variant: "primary" | "primaryOutline" | "secondary";
+  fullWidth?: boolean;
 }
 
-export const GcButton: React.FC<IButtonProps> = ({ text, variant }) => {
+export const GcButton: React.FC<IButtonProps> = ({
+  text,
+  variant,
+  fullWidth,
+}) => {
   const classVariant =
     variant === "primary"
       ? "bg-gc_primary_500"
@@ -17,7 +22,9 @@ export const GcButton: React.FC<IButtonProps> = ({ text, variant }) => {
 
   return (
     <button
-      className={`${classVariant} rounded-lg font-semibold text-white text-sm md:leading-[1.5rem] px-8 md:text-base md:py-4 md:px-14`}
+      className={`${classVariant} ${
+        fullWidth ? "w-full" : "w-fit"
+      } rounded-lg font-semibold text-white text-sm leading-[1.5rem] px-8 md:text-base py-4 md:px-14`}
     >
       {text}
     </button>

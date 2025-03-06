@@ -1,15 +1,21 @@
 import Image from "next/image";
-import Logo from "@/app/assets/images/logo/Logo-White.svg";
-import FbIcon from "@/app/assets/images/icons/facebook.svg";
-import LinkedinIcon from "@/app/assets/images/icons/Linkedin.svg";
-import TwitterIcon from "@/app/assets/images/icons/twitter.svg";
-import IGIcon from "@/app/assets/images/icons/instagram.svg";
+import Logo from "../../../../public/images/logo/Logo-White.svg";
+import FbIcon from "../../../../public/images/icons/facebook.svg";
+import LinkedinIcon from "../../../../public/images/icons/Linkedin.svg";
+import TwitterIcon from "../../../../public/images/icons/twitter.svg";
+import IGIcon from "../../../../public/images/icons/instagram.svg";
+import FooterPattern from "../../../../public/images/pattern.png";
 import Link from "next/link";
 
 export const Footer = () => {
   return (
-    <footer className="bg-gc_primary_900">
-      <div className="container w-full px-4 md:px-0">
+    <footer
+    style={{
+      backgroundImage: `url(${FooterPattern.src})`
+    }}
+     className="bg-gc_primary_900 bg-cover"
+     >
+      <div className="container w-full px-4">
         <div className="mx-auto flex items-center flex-col gap-2 pt-14 md:gap-4 md:pb-[120px]">
           <Image
             src={Logo}
