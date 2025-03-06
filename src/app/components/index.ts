@@ -6,3 +6,5 @@ export * from "./our-offerings"
 export * from "./empowering-section"
 export * from './proven-result'
 export * from "./secure-section"
+export * from "./modal"
+export * from "./contact"

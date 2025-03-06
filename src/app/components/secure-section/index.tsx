@@ -5,7 +5,7 @@ import Image from "next/image";
 export const SecureYourFuture = () => {
   return (
     <section className="container flex flex-col w-full gap-12 px-4 py-14 lg:py-16">
-      <div className="flex flex-col mx-auto text-center items-center gap-4 lg:gap-6 w-full md:w-8/12 lg:w7/12">
+      <div className="flex flex-col mx-auto text-left items-center gap-4 lg:gap-6 w-full md:w-8/12 lg:w7/12 lg:text-center">
         <h3 className="text-[2rem] text-gc_grey_800 font-bold leading-[2.4rem] lg:text-[3rem] xl:text-[3.5rem] xl:leading-[4.1rem]">
           <span className="text-gc_primary_500"> Secure</span> Your Financial{" "}
           <span className="text-gc_primary_500">Future</span> with Guten Capital

@@ -6,9 +6,12 @@ import MenuIcon from "../../../../public/images/icons/menu.svg";
 import { GcButton } from "../button";
 import React from "react";
 import NavPattern from "../../../../public/images/pattern.png";
+import { GcModal } from "../modal";
+import { ContactUs } from "../contact";
 
 export const Nav = () => {
   const [open, setOpen] = React.useState(false);
+  const [openContact, setOpenContact] = React.useState(false);
 
   const handleToggle = () => setOpen(!open);
 
@@ -54,9 +57,22 @@ export const Nav = () => {
         </button>
 
         <div className="hidden lg:block">
-          <GcButton variant="primaryOutline" text="Contact us" />
+          <GcButton
+            onClick={() => setOpenContact(true)}
+            variant="primaryOutline"
+            text="Contact us"
+          />
         </div>
       </div>
+
+      <GcModal
+        title="Let's Talk"
+        details="Talk to one of our experts today and unlock your financial future"
+        open={openContact}
+        handleClose={() => setOpenContact(false)}
+      >
+        <ContactUs />
+      </GcModal>
     </nav>
   );
 };

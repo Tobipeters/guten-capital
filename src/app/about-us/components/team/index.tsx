@@ -30,7 +30,7 @@ export const MeetTheTeam = () => {
 
   return (
     <section className="container flex flex-col w-full gap-12 px-4 py-14 lg:py-20">
-      <div className="flex flex-col mx-auto text-center gap-4 lg:gap-6 w-full lg:w-7/12">
+      <div className="flex flex-col mx-auto text-start gap-4 lg:gap-6 w-full lg:text-center lg:w-7/12">
         <div className="inline-flex flex-col gap-4 text-sm text-gc_secondary_900 font-normal leading-[1.65rem] lg:text-lg">
           MEET THE TEAM
         </div>
@@ -55,7 +55,7 @@ export const MeetTheTeam = () => {
                 quality={100}
               />
             </div>
-            <div className="flex flex-col gap-2 w-full lg:gap-3">
+            <div className="flex flex-col gap-1 w-full">
               <h4 className="text-gc_grey_900 text-base font-bold lg:text-3xl">
                 {team.name}{" "}
               </h4>
