@@ -46,7 +46,7 @@ export const MeetTheTeam = () => {
             key={id}
             className="flex flex-col gap-6 w-full md:w-[calc(33.33%-10.7px)] lg:w-[calc(33.33%-16px)]"
           >
-            <div className="w-full h-[440px] rounded-2xl relative overflow-hidden md:h-[200px]">
+            <div className="w-full h-[440px] rounded-2xl relative overflow-hidden">
               <Image
                 src={team.img}
                 alt={team.title}
