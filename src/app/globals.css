@@ -2,3 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
+
+.no_scroll_x {
+    scrollbar-width: none;
+  }

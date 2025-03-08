@@ -9,30 +9,33 @@ export const ContactUs = () => {
         </label>
 
         <input
+          dir="ltr"
           placeholder="Enter business name"
-          className="w-full px-0 pb-0 outline-none placeholder:text-[0px] lg:placeholder:text-gc_gray_200 lg:placeholder:text-lg lg:pt-3"
+          className="w-full px-0 pb-0 outline-none placeholder:text-[0px]  placeholder:text-left lg:placeholder:text-right lg:placeholder:text-gc_gray_200 lg:placeholder:text-lg"
         />
       </div>
 
       <div className="flex items-center flex-wrap justify-between py-2 border-b border-b-gc_gray_200 lg:py-6 lg:flex-nowrap">
         <label className="text-gc_gray_200 text-sm font-normal w-full lg:font-bold lg:text-2xl lg:text-gc_grey_800">
-        Enter business email<sup className="text-[#FF0A0A]">*</sup>
+          Enter business email<sup className="text-[#FF0A0A]">*</sup>
         </label>
 
         <input
+          dir="ltr"
           placeholder="Enter business email"
-          className="w-full px-0 pb-0 outline-none placeholder:text-[0px] lg:placeholder:text-gc_gray_200 lg:placeholder:text-lg lg:pt-3"
+          className="w-full px-0 pb-0 outline-none placeholder:text-[0px]  placeholder:text-left lg:placeholder:text-right lg:placeholder:text-gc_gray_200 lg:placeholder:text-lg"
         />
       </div>
 
-      <div className="flex items-center flex-wrap justify-between py-2 border-b border-b-gc_gray_200 mb-4 lg:py-6 lg:flex-nowrap">
+      <div className="flex items-center flex-wrap justify-between py-2 border-b border-b-gc_gray_200 mb- lg:py-6 lg:flex-nowrap">
         <label className="text-gc_gray_200 text-sm font-normal w-full lg:font-bold lg:text-2xl lg:text-gc_grey_800">
-        How can we help you?<sup className="text-[#FF0A0A]">*</sup>
+          How can we help you?<sup className="text-[#FF0A0A]">*</sup>
         </label>
 
         <input
+          dir="ltr"
           placeholder="Enter message"
-          className="w-full px-0 pb-0 outline-none placeholder:text-[0px] lg:placeholder:text-gc_gray_200 lg:placeholder:text-lg lg:pt-3"
+          className="w-full px-0 pb-0 outline-none placeholder:text-[0px]  placeholder:text-left lg:placeholder:text-right lg:placeholder:text-gc_gray_200 lg:placeholder:text-lg"
         />
       </div>
 

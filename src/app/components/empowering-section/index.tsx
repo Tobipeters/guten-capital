@@ -2,8 +2,19 @@ import Image from "next/image";
 import AssetManagedImg from "../../../../public/images/assets-managedpng.png";
 import PremiumClientImg from "../../../../public/images/premium-clientpng.png";
 import SettlementImg from "../../../../public/images/settlement-paidpng.png";
+import { motion, Variants, useInView } from "framer-motion";
+import React from "react";
 
-export const EmpoweringSection = () => {
+export const EmpoweringSection = ({
+  sectionVariants,
+  itemVariants,
+}: {
+  sectionVariants: Variants;
+  itemVariants: Variants;
+}) => {
+  const ref = React.useRef(null);
+  const isInView = useInView(ref, { once: true, margin: "-50px" });
+
   const stats = [
     {
       name: "$100+ billion",
@@ -23,16 +34,27 @@ export const EmpoweringSection = () => {
   ];
 
   return (
-    <section className="container flex flex-col w-full gap-12 px-4 py-14 lg:py-16">
-      <div className="flex flex-col w-full gap-4 lg:gap-6">
+    <motion.section
+      ref={ref}
+      initial="hidden"
+      animate={isInView ? "visible" : "hidden"}
+      variants={sectionVariants}
+      className="container flex flex-col w-full gap-12 px-4 py-14 lg:py-20"
+    >
+      <motion.div className="w-full" variants={itemVariants}>
         <h3 className="text-[2rem] text-gc_grey_800 font-bold leading-[2.4rem] lg:w-9/12 lg:text-[3rem] xl:text-[3.5rem] xl:leading-[4.1rem] xl:w-7/12">
           Empowering Your Financial Future with Expertise & Integrity.
         </h3>
-      </div>
+      </motion.div>
 
       <div className="flex flex-wrap items-center gap-8 md:gap-4 lg:gap-10">
         {stats.map((stat, id) => (
-          <div key={id} className="flex flex-col gap-6 w-full md:w-[calc(33.33%-10.7px)] lg:w-[calc(33.33%-26.7px)]">
+          <motion.div
+            key={id}
+            variants={itemVariants}
+            className="flex flex-col gap-4 w-full md:w-[calc(33.33%-10.7px)] lg:w-[calc(33.33%-26.7px)]"
+           
+          >
             <div className="w-full h-[240px] rounded-2xl relative overflow-hidden md:h-[200px] lg:h-[240px]">
               <Image
                 src={stat.img}
@@ -50,9 +72,9 @@ export const EmpoweringSection = () => {
                 {stat.title}{" "}
               </p>
             </div>
-          </div>
+          </motion.div>
         ))}
       </div>
-    </section>
+    </motion.section>
   );
 };

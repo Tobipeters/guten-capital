@@ -1,8 +1,19 @@
 import Image from "next/image";
 import XWhite from "../../../../public/images/x-white.png";
 import LWhite from "../../../../public/images/L-white.png";
+import { motion, Variants, useInView } from "framer-motion";
+import React from "react";
 
-export const ProvenResult = () => {
+export const ProvenResult = ({
+  sectionVariants,
+  itemVariants,
+}: {
+  sectionVariants: Variants;
+  itemVariants: Variants;
+}) => {
+  const ref = React.useRef(null);
+  const isInView = useInView(ref, { once: true, margin: "-50px" });
+
   const results = [
     {
       name: "Jane Doe",
@@ -28,8 +39,14 @@ export const ProvenResult = () => {
   ];
 
   return (
-    <section className="container flex flex-col w-full gap-12 px-4 py-14 lg:py-16">
-      <div className="flex flex-col w-full gap-4 lg:gap-6">
+    <motion.section
+      ref={ref}
+      initial="hidden"
+      animate={isInView ? "visible" : "hidden"}
+      variants={sectionVariants}
+      className="container flex flex-col w-full gap-12 px-4 py-14 lg:py-20"
+    >
+      <motion.div className="w-full" variants={itemVariants}>
         <h3 className="text-[2rem] text-gc_grey_800 font-bold leading-[2.4rem] lg:text-[3rem] xl:text-[3.5rem] xl:leading-[4.1rem]">
           Trusted by investors.{" "}
           <span className="text-[#0E8216]"> Proven results.</span>
@@ -39,12 +56,13 @@ export const ProvenResult = () => {
           meticulously tailored to meet the unique needs of both individuals and
           institutional investors
         </p>
-      </div>
+      </motion.div>
 
       <div className="flex flex-wrap items-center gap-6 md:gap-4 lg:gap-6">
         {results.map((result, id) => (
-          <div
+          <motion.div
             key={id}
+            variants={itemVariants}
             className="bg-[#EFEFEF] relative overflow-hidden rounded-xl flex flex-col gap-4 p-6 w-full min-h-[370px] lg:min-h-[420px] md:w-[calc(33.33%-10.7px)] lg:w-[calc(33.33%-16px)]"
           >
             {(id === 0 || id === 2) && (
@@ -84,9 +102,9 @@ export const ProvenResult = () => {
             <div className="text-sm text-gc_grey_400 font-normal leading-[1.5rem] mt-4 pr-2">
               {result.testimony}
             </div>
-          </div>
+          </motion.div>
         ))}
       </div>
-    </section>
+    </motion.section>
   );
 };

@@ -38,5 +38,17 @@ module.exports = {
       },
     },
   },
-  plugins: [],
+  plugins: [
+    ({ addUtilities }: any) => {
+      const newUtilities = {
+        ".trans": {
+          transitionProperty: "all",
+          transitionDuration: "300ms",
+          transitionTimingFunction: "ease",
+        },
+      };
+
+      addUtilities(newUtilities, ["responsive", "hover"]);
+    },
+  ],
 };
