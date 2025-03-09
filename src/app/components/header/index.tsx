@@ -20,7 +20,7 @@ export const Header = () => {
       <div className="relative z-10 container h-full flex items-center px-4">
         <div className="flex flex-col gap-[130px] w-full lg:gap-[150px]">
           <div className="text-white flex flex-col gap-4 w-full lg:w-7/12 xl:w-1/2">
-            <h3 className="text-[2.5rem] leading-[4rem] font-bold md:text-[3rem] lg:leading-[4.2rem] lg:text-[3.5rem]">
+            <h3 className="text-[2.5rem] leading-[120%] font-bold md:text-[3rem] lg:leading-[4.2rem] lg:text-[3.5rem]">
               Your Trusted Partner in Wealth Management
             </h3>
             <p className="text-sm font-normal md:text-base leading-[1.5rem] lg:w-10/12">
