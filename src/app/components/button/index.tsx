@@ -5,6 +5,7 @@ interface IButtonProps {
   variant: "primary" | "primaryOutline" | "secondary";
   fullWidth?: boolean;
   onClick?: () => void;
+  className?: string
 }
 
 export const GcButton: React.FC<IButtonProps> = ({
@@ -12,6 +13,7 @@ export const GcButton: React.FC<IButtonProps> = ({
   variant,
   fullWidth,
   onClick,
+  className
 }) => {
   const classVariant =
     variant === "primary"
@@ -25,7 +27,7 @@ export const GcButton: React.FC<IButtonProps> = ({
   return (
     <button
       onClick={onClick}
-      className={`${classVariant} ${
+      className={`${classVariant} ${className} ${
         fullWidth ? "w-full" : "w-fit"
       } rounded-lg font-semibold text-white text-sm leading-[1.5rem] px-8 md:text-base py-4 md:px-14`}
     >

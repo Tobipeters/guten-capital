@@ -35,7 +35,7 @@ export const Nav = () => {
 
   const menus = [
     { name: "Home", url: HOME_URL },
-    { name: "ABout us", url: ABOUT_URL },
+    { name: "About us", url: ABOUT_URL },
   ];
 
   const handleToggle = () => setOpen(!open);

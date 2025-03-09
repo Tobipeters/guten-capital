@@ -43,7 +43,7 @@ export const metadata: Metadata = {
   openGraph:{
     title,
     description,
-    images: ['/images/logo/logo.png'],
+    images: ['/images/header-bg.png'],
     type: 'website'
   }
 };
