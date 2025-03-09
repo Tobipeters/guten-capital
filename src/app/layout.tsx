@@ -33,9 +33,19 @@ const pangram = localFont({
   ],
 });
 
+const title = "Guten Capital | Home"
+const description =  "Your Trusted Partner in Wealth Management"
+
 export const metadata: Metadata = {
-  title: "Guten Capital",
-  description: "Your Trusted Partner in Wealth Management",
+  title,
+  description,
+  keywords: "Guten, capital, wealth, partner, investment, growth, success",
+  openGraph:{
+    title,
+    description,
+    images: ['/images/logo/logo.png'],
+    type: 'website'
+  }
 };
 
 export default function RootLayout({

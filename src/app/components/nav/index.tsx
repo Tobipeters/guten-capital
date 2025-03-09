@@ -1,7 +1,7 @@
 "use client";
 import Image from "next/image";
 import Link from "next/link";
-import Logo from "../../../../public/images/logo/Logo-White.svg";
+import Logo from "../../../../public/images/logo/logo.png";
 import MenuIcon from "../../../../public/images/icons/menu.svg";
 import { GcButton } from "../button";
 import React from "react";

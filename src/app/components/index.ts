@@ -8,3 +8,4 @@ export * from './proven-result'
 export * from "./secure-section"
 export * from "./modal"
 export * from "./contact"
+export * from "./tab-nav"

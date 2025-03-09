@@ -12,6 +12,8 @@ import {
 } from "./components";
 import { Variants } from "framer-motion";
 
+
+
 export default function Home() {
   const [openContact, setOpenContact] = React.useState<boolean>(false);
 
@@ -37,6 +39,13 @@ export default function Home() {
 
   return (
     <>
+    {/* <SEO
+    title="Guten Capital | Home"
+    description="Your Trusted Partner in Wealth Management"
+    keywords="Guten, capital, wealth, partner, investment, growth, success, "
+    ogImage="/images/logo/logo.png"
+    
+    /> */}
       <Header />
       <OurOfferings handleOpenContact={handleOpenContact} />
       <EmpoweringSection
