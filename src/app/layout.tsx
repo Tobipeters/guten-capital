@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import localFont from "next/font/local";
 import { Nav, Footer } from "./components";
+import OgImage from "./og/header-bg.png"
 
 const pangram = localFont({
   src: [
@@ -44,7 +45,7 @@ export const metadata: Metadata = {
   openGraph:{
     title,
     description,
-    images: '/og/header-bg.png',
+    images: OgImage.src,
     type: 'website'
   }
 };

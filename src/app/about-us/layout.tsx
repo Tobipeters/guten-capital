@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import OgImg from "../og/about-us-bg.png"
 
 const title = "Guten Capital | About us";
 const description =
@@ -12,7 +13,7 @@ export const metadata: Metadata = {
   openGraph: {
     title,
     description,
-    images: "/og/about-us-bg.png",
+    images: OgImg.src,
     type: "website",
   },
 };
