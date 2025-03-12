@@ -4,7 +4,7 @@ import AboutBg from "../../../../../public/images/about-us-bg.png";
 export const Header = () => {
   return (
     <section className="container flex flex-col w-full gap-12 px-4 py-14 lg:py-20">
-      <div className="flex flex-col gap-4 lg:gap-6 w-full lg:w-10/12">
+      <div className="flex flex-col gap-4 lg:gap-6 w-full xl:w-10/12">
         <div className="inline-flex flex-col gap-4 text-sm text-gc_secondary_900 font-normal leading-[1.65rem] lg:text-lg">
           ABOUT US
         </div>

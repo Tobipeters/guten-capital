@@ -6,28 +6,27 @@ import ThreeCircle from "../../../../../public/images/3-circle.png";
 import { TabNav } from "@/app/components";
 
 export const OurMissionAndVision = () => {
-  const [active, setActive] = React.useState<string>("mission");
+  const [active, setActive] = React.useState<string>("vision");
 
   const options = [
     {
-      name: "Our Mission",
-      value: "mission",
-    },
-    {
       name: "Our Vision",
       value: "vision",
+    },
+    {
+      name: "Our Mission",
+      value: "mission",
     },
   ];
 
   return (
     <section className="container flex flex-col w-full gap-8 md:gap-12 px-4 py-14 lg:py-16">
-
       <TabNav options={options} active={active} setActive={setActive} />
 
       {active === "mission" && (
         <div className="flex flex-wrap gap-y-9 items-center w-full h-full">
           <div className="w-full flex flex-col gap-6 lg:w-7/12 lg:gap-10 xl:w-8/12">
-            <p className="text-base text-gc_grey_400 font-normal leading-[1.5rem] lg:leading-[2.25rem] lg:text-3xl">
+            <p className="text-base text-gc_grey_400 font-normal leading-[1.5rem] lg:leading-[2.25rem] lg:text-2xl">
               At Guten Capital Limited our primary mission is to offer inclusive
               services in securities trading, investment, and advisory. We are
               dedicated to empowering our clients, enabling them to make astute
@@ -55,7 +54,7 @@ export const OurMissionAndVision = () => {
       {active === "vision" && (
         <div className="flex flex-wrap gap-y-9 items-center w-full h-full">
           <div className="w-full flex flex-col gap-6 lg:w-7/12 lg:gap-10 xl:w-8/12">
-            <p className="text-base text-gc_grey_400 font-normal leading-[1.5rem] lg:leading-[2.25rem] lg:text-3xl">
+            <p className="text-base text-gc_grey_400 font-normal leading-[1.5rem] lg:leading-[2.25rem] lg:text-2xl">
               At Guten Capital Limited, we are driven by a visionary goal: to
               emerge as a transformative force in reshaping the path to
               financial success for both individuals and institutions. Our

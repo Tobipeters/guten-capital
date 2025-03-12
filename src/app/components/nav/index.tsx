@@ -41,8 +41,8 @@ export const Nav = () => {
   const handleToggle = () => setOpen(!open);
 
   return (
-    <nav className="bg-[#292828] relative flex items-center h-12 px-4 lg:h-24">
-      <div className="container flex items-center ">
+    <nav className="bg-[#292828] relative flex items-center h-12 lg:h-24">
+      <div className="container flex items-center px-4">
         <Link className="relative h-5 w-16 lg:h-[44px] lg:w-[140px]" href={"/"}>
           <Image
             src={Logo}
@@ -70,7 +70,7 @@ export const Nav = () => {
             <li
               key={id}
               onClick={handleToggle}
-              className={`h-fit lg:w-[150px] lg:h-full text-center relative ${
+              className={`text-center h-fit md:container md:text-left md:px-4 lg:w-[150px] lg:h-full lg:text-center relative ${
                 pathname === menu.url
                   ? "text-gc_grey_800 lg:text-white lg:after:content-['']"
                   : "lg:after:content-none"
@@ -90,7 +90,7 @@ export const Nav = () => {
           onClick={handleToggle}
           className={`${
             open ? "border-gc_primary_900 bg-gc_primary_500" : ""
-          } !outline-none absolute right-0 text-white text-xs inline-flex gap-1 items-center border-l border-[#FFFFFF4D] p-4 lg:hidden`}
+          } !outline-none absolute right-0 text-white text-xs inline-flex gap-1 items-center border-l border-[#FFFFFF4D] p-4 md:relative md:ml-auto md:pr-5 lg:hidden`}
         >
           <Image src={MenuIcon} alt="menu icon" width={16} height={16} />
           Menu

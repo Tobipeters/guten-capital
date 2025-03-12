@@ -37,13 +37,14 @@ const title = "Guten Capital | Home"
 const description =  "Your Trusted Partner in Wealth Management"
 
 export const metadata: Metadata = {
+  metadataBase: new URL(`${process.env.NEXT_PUBLIC_WEBISTE_BASE_URL}`),
   title,
   description,
   keywords: "Guten, capital, wealth, partner, investment, growth, success",
   openGraph:{
     title,
     description,
-    images: ['/images/header-bg.png'],
+    images: '/images/og/header-bg.png',
     type: 'website'
   }
 };
