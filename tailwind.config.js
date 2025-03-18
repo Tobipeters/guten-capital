@@ -20,6 +20,7 @@ module.exports = {
         gc_primary_700: "#19479c",
         gc_primary_800: "#143779",
         gc_primary_900: "#0E2A5C",
+        gc_secondary_50: "#EFF4FF",
         gc_secondary_100: "#ccdbff",
         gc_secondary_200: "#b3caff",
         gc_secondary_300: "#90b2ff",

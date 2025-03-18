@@ -74,7 +74,7 @@ export const Nav = () => {
                 pathname === menu.url
                   ? "text-gc_grey_800 lg:text-white lg:after:content-['']"
                   : "lg:after:content-none"
-              } lg:after:absolute lg:after:w-[7px] lg:after:h-[6px] lg:after:bg-white lg:after:-bottom-2 lg:after:rounded-full lg:after:left-[50%] lg:after:ml-[-3.5px]`}
+              } cursor-pointer lg:after:absolute lg:after:w-[7px] lg:after:h-[6px] lg:after:bg-white lg:after:-bottom-2 lg:after:rounded-full lg:after:left-[50%] lg:after:ml-[-3.5px]`}
             >
               <Link
                 href={menu.url}

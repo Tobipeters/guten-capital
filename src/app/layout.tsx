@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import localFont from "next/font/local";
-import { Nav, Footer } from "./components";
-import OgImage from "./og/header-bg.png"
+import { Nav, Footer, LoadingScreen } from "./components";
+import OgImage from "./og/header-bg.png";
 
 const pangram = localFont({
   src: [
@@ -34,20 +34,20 @@ const pangram = localFont({
   ],
 });
 
-const title = "Guten Capital | Home"
-const description =  "Your Trusted Partner in Wealth Management"
+const title = "Guten Capital | Home";
+const description = "Your Trusted Partner in Wealth Management";
 
 export const metadata: Metadata = {
   metadataBase: new URL(`${process.env.NEXT_PUBLIC_WEBISTE_BASE_URL}`),
   title,
   description,
   keywords: "Guten, capital, wealth, partner, investment, growth, success",
-  openGraph:{
+  openGraph: {
     title,
     description,
     images: OgImage.src,
-    type: 'website'
-  }
+    type: "website",
+  },
 };
 
 export default function RootLayout({
@@ -57,7 +57,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${pangram.className} antialiased`}>
+      <body className={`${pangram.className} relative antialiased`}>
+        <LoadingScreen />
+
         <Nav />
         {children}
         <Footer />
