@@ -46,14 +46,15 @@ export const MeetTheTeam = () => {
             key={id}
             className="flex flex-col gap-6 w-full md:w-[calc(50%-10.7px)] lg:w-[calc(33.33%-16px)]"
           >
-            <div className="w-full h-[440px] rounded-2xl relative overflow-hidden">
-              <Image
+            <div className="w-full h-[440px] bg-[#cccc] rounded-2xl relative overflow-hidden">
+              
+              {/* <Image
                 src={team.img}
                 alt={team.title}
                 className="object-cover"
                 fill
                 quality={100}
-              />
+              /> */}
             </div>
             <div className="flex flex-col gap-1 w-full">
               <h4 className="text-gc_grey_900 text-base font-bold lg:text-3xl">

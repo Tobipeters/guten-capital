@@ -15,24 +15,24 @@ export const OurOfferings = ({
 }: {
   handleOpenContact: () => void;
 }) => {
-  const [active, setActive] = React.useState<string>("trading");
+  const [active, setActive] = React.useState<string>("wealth");
 
   const offerings = [
     {
-      name: "Securities Trading",
-      value: "trading",
+      name: "Wealth Management",
+      value: "wealth",
     },
     {
-      name: "Investment Management",
-      value: "investment",
+      name: "Investment Advisory",
+      value: "advisory",
     },
     {
-      name: "Portfolio Analysis & Optimization",
+      name: "Portfolio Optimization",
       value: "portfolio",
     },
     {
-      name: "Financial Planning",
-      value: "finance",
+      name: "Securities Trading",
+      value: "securities",
     },
   ];
 
@@ -44,17 +44,16 @@ export const OurOfferings = ({
           <span className="text-gc_primary_500"> Guten Capital</span>
         </h3>
         <p className="text-sm text-gc_grey_400 font-normal leading-[1.5rem] lg:text-base lg:w-10/12 xl:w-7/12">
-          At Guten Capital Limited we offer a comprehensive range of services
-          meticulously tailored to meet the unique needs of both individuals and
-          institutional investors
+          At Guten Capital Limited, we are a multi-service financial firm
+          delivering bespoke investment solutions and high-performance
+          strategies to both individuals and institutions.
         </p>
       </div>
 
       <TabNav options={offerings} active={active} setActive={setActive} />
 
-
       <AnimatePresence mode="wait">
-        {active === "trading" && (
+        {active === "wealth" && (
           <motion.div
             key="trading-content"
             initial={{ opacity: 0, y: 12 }}
@@ -65,28 +64,37 @@ export const OurOfferings = ({
           >
             {/* Left Side - Text Content */}
             <div className="w-full flex flex-col gap-6 lg:w-1/2 lg:gap-10">
-              <motion.h4
-                initial={{ opacity: 0, x: -20 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.3, ease: "easeOut", delay: 0.1 }}
-                className="text-2xl font-semibold leading-[2.25rem] lg:text-[2rem] lg:w-10/12 xl:w-8/12"
-              >
-                <span className="text-gc_primary_500">Diversify</span> your
-                portfolio with stocks, Bonds, options and ETFs
-              </motion.h4>
+              <div className="flex flex-col gap-3">
+                <motion.h4
+                  initial={{ opacity: 0, x: -20 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  transition={{ duration: 0.3, ease: "easeOut", delay: 0.1 }}
+                  className="text-2xl font-semibold leading-[2.25rem] lg:text-[2rem] lg:w-10/12 xl:w-8/12"
+                >
+                  <span className="text-gc_primary_500">Long-Term</span>{" "}
+                  Financial Partnership
+                </motion.h4>
+
+                <p className="text-sm text-gc_grey_300 font-normal leading-[1.5rem] lg:text-base lg:w-11/12 xl:w-9/12">
+                  Our Wealth Management service is tailored for high-net-worth
+                  and emerging clients, focused on growing, preserving, and
+                  transferring wealth through personalized strategies.
+                </p>
+              </div>
 
               {/* Bullet Points */}
               <ul className="flex flex-col gap-5 md:gap-6">
                 {[
                   {
-                    title: "Real Market - Insights",
+                    title: "Tailored, multi-asset investment strategies",
                     description:
-                      "Navigate the financial markets with confidence through expertly executed trades and market insights.",
+                      "We design custom portfolios across diverse asset classes to align with your risk profile and financial goals.",
                   },
                   {
-                    title: "Long-Term Wealth Creation",
+                    title:
+                      "Holistic financial planning (liquidity, tax, legacy)",
                     description:
-                      "Beyond short-term gains, we focus on sustainable strategies that ensure lasting financial success.",
+                      "Beyond investing, we integrate tax strategy, liquidity needs, and legacy planning into a unified wealth approach.",
                   },
                 ].map((item, index) => (
                   <motion.li
@@ -148,7 +156,7 @@ export const OurOfferings = ({
       </AnimatePresence>
 
       <AnimatePresence mode="wait">
-        {active === "investment" && (
+        {active === "advisory" && (
           <motion.div
             key="trading-content"
             initial={{ opacity: 0, y: 12 }}
@@ -158,15 +166,22 @@ export const OurOfferings = ({
             className="flex flex-wrap gap-y-9 items-center w-full h-full lg:pt-10"
           >
             <div className="w-full flex flex-col gap-6 lg:w-1/2 lg:gap-10">
-              <motion.h4
-                initial={{ opacity: 0, x: -20 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.3, ease: "easeOut", delay: 0.1 }}
-                className="text-2xl font-semibold leading-[2.25rem] lg:text-[2rem] lg:w-10/12 xl:w-8/12"
-              >
-                <span className="text-[#F07021]">Customized</span> Customized
-                strategies that align with your goals
-              </motion.h4>
+              <div className="flex flex-col gap-3">
+                <motion.h4
+                  initial={{ opacity: 0, x: -20 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  transition={{ duration: 0.3, ease: "easeOut", delay: 0.1 }}
+                  className="text-2xl font-semibold leading-[2.25rem] lg:text-[2rem] lg:w-10/12 xl:w-8/12"
+                >
+                  <span className="text-[#F07021]">Clarity,</span> Not Controls
+                </motion.h4>
+
+                <p className="text-sm text-gc_grey_300 font-normal leading-[1.5rem] lg:text-base lg:w-11/12 xl:w-9/12">
+                  Our advisory service empowers clients to make strategic
+                  investment decisions, offering insights and recommendations
+                  without executing trades unless authorized.
+                </p>
+              </div>
 
               <ul className="flex flex-col gap-5 md:gap-6">
                 <li className="inline-flex items-start gap-2">
@@ -179,11 +194,11 @@ export const OurOfferings = ({
                   />
                   <div className="flex flex-col gap-1 mt-[-0.25rem]">
                     <h5 className="text-base text-gc_grey_800 font-bold lg:text-lg">
-                      Tailored portfolio strategies
+                      Custom Investment Recommendations
                     </h5>
                     <p className="text-sm text-gc_grey_300 font-normal leading-[1.5rem] lg:text-base lg:w-11/12 xl:w-9/12">
-                      Grow and protect your wealth with strategies designed to
-                      maximize long-term returns while minimizing risk.
+                      We provide objective, client- specific advice tailored to
+                      your financial goals and risk appetite.
                     </p>
                   </div>
                 </li>
@@ -197,11 +212,11 @@ export const OurOfferings = ({
                   />
                   <div className="flex flex-col gap-1 mt-[-0.25rem]">
                     <h5 className="text-base text-gc_grey_800 font-bold lg:text-lg">
-                      Transparency
+                      Market Education & Strategic Planning
                     </h5>
                     <p className="text-sm text-gc_grey_300 font-normal leading-[1.5rem] lg:text-base lg:w-11/12 xl:w-9/12">
-                      We uphold the highest standards of transparency, ensuring
-                      your investments are managed with trust and accountability
+                      Empowering you with insights and strategy to navigate
+                      complex markets confidently and independently.
                     </p>
                   </div>
                 </li>
@@ -245,15 +260,24 @@ export const OurOfferings = ({
             className="flex flex-wrap gap-y-9 items-center w-full h-full lg:pt-10"
           >
             <div className="w-full flex flex-col gap-6 lg:w-1/2 lg:gap-10">
-              <motion.h4
-                initial={{ opacity: 0, x: -20 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.3, ease: "easeOut", delay: 0.1 }}
-                className="text-2xl font-semibold leading-[2.25rem] lg:text-[2rem] lg:w-10/12 xl:w-8/12"
-              >
-                <span className="text-gc_primary_500">Tailored</span> strategies
-                to <span className="text-[#0E8216]">grow</span> your finance
-              </motion.h4>
+              <div className="flex flex-col gap-3">
+                <motion.h4
+                  initial={{ opacity: 0, x: -20 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  transition={{ duration: 0.3, ease: "easeOut", delay: 0.1 }}
+                  className="text-2xl font-semibold leading-[2.25rem] lg:text-[2rem] lg:w-10/12 xl:w-8/12"
+                >
+                  Refined{" "}
+                  <span className="text-gc_primary_500">Portfolios</span>{" "}
+                  Maximum <span className="text-[#0E8216]">Value</span>
+                </motion.h4>
+
+                <p className="text-sm text-gc_grey_300 font-normal leading-[1.5rem] lg:text-base lg:w-11/12 xl:w-9/12">
+                  Through advanced analysis and real time market monitoring, we
+                  rebalance client portfolios to enhance returns while
+                  maintaining risk alignment.
+                </p>
+              </div>
 
               <ul className="flex flex-col gap-5 md:gap-6">
                 <li className="inline-flex items-start gap-2">
@@ -266,12 +290,11 @@ export const OurOfferings = ({
                   />
                   <div className="flex flex-col gap-1 mt-[-0.25rem]">
                     <h5 className="text-base text-gc_grey_800 font-bold lg:text-lg">
-                      Expert guidance
+                      Higher Long-Term Returns with Controlled Risk
                     </h5>
                     <p className="text-sm text-gc_grey_300 font-normal leading-[1.5rem] lg:text-base lg:w-11/12 xl:w-9/12">
-                      Receive expert guidance on investment opportunities, risk
-                      assessment, and wealth-building strategies tailored to
-                      your financial goals.
+                      We optimize your portfolio to seek strong returns while
+                      staying within your defined risk parameters.
                     </p>
                   </div>
                 </li>
@@ -285,12 +308,11 @@ export const OurOfferings = ({
                   />
                   <div className="flex flex-col gap-1 mt-[-0.25rem]">
                     <h5 className="text-base text-gc_grey_800 font-bold lg:text-lg">
-                      Tailored Financial Growth
+                      Alignment with Evolving Goals & Market Conditions
                     </h5>
                     <p className="text-sm text-gc_grey_300 font-normal leading-[1.5rem] lg:text-base lg:w-11/12 xl:w-9/12">
-                      Whether you&apos;re an individual investor or a corporate
-                      entity, we offer solutions designed to meet your specific
-                      needs.
+                      Portfolios are actively adjusted to reflect life changes,
+                      market shifts, and emerging opportunities.
                     </p>
                   </div>
                 </li>
@@ -324,7 +346,7 @@ export const OurOfferings = ({
       </AnimatePresence>
 
       <AnimatePresence mode="wait">
-        {active === "finance" && (
+        {active === "securities" && (
           <motion.div
             key="trading-content"
             initial={{ opacity: 0, y: 12 }}
@@ -334,16 +356,23 @@ export const OurOfferings = ({
             className="flex flex-wrap gap-y-9 items-center w-full h-full lg:pt-10"
           >
             <div className="w-full flex flex-col gap-6 lg:w-1/2 lg:gap-10">
-              <motion.h4
-                initial={{ opacity: 0, x: -20 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.3, ease: "easeOut", delay: 0.1 }}
-                className="text-2xl font-semibold leading-[2.25rem] lg:text-[2rem] lg:w-10/12 xl:w-8/12"
-              >
-                <span className="text-gc_primary_500">Planning</span> {""}
-                based on your income, expenses, savings and{" "}
-                <span className="text-gc_primary_500">financial goals</span>
-              </motion.h4>
+              <div className="flex flex-col gap-3">
+                <motion.h4
+                  initial={{ opacity: 0, x: -20 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  transition={{ duration: 0.3, ease: "easeOut", delay: 0.1 }}
+                  className="text-2xl font-semibold leading-[2.25rem] lg:text-[2rem] lg:w-10/12 xl:w-8/12"
+                >
+                  <span className="text-gc_primary_500">Disciplined</span> {""}
+                  Execution. Transparent{" "}
+                  <span className="text-gc_primary_500">Results</span>
+                </motion.h4>
+                <p className="text-sm text-gc_grey_300 font-normal leading-[1.5rem] lg:text-base lg:w-11/12 xl:w-9/12">
+                  We execute equity, bond and ETF trades for both proprietary
+                  accounts and client mandates with speed, accuracy, and
+                  regulatory integrity.
+                </p>
+              </div>
 
               <ul className="flex flex-col gap-5 md:gap-6">
                 <li className="inline-flex items-start gap-2">
@@ -356,12 +385,11 @@ export const OurOfferings = ({
                   />
                   <div className="flex flex-col gap-1 mt-[-0.25rem]">
                     <h5 className="text-base text-gc_grey_800 font-bold lg:text-lg">
-                      Expert-Led Strategies
+                      Higher Long-Term Returns with Controlled Risk
                     </h5>
                     <p className="text-sm text-gc_grey_300 font-normal leading-[1.5rem] lg:text-base lg:w-11/12 xl:w-9/12">
-                      Our team brings years of industry expertise, utilizing
-                      market insights and data-driven approaches to maximize
-                      your returns.
+                      We optimize your portfolio to seek strong returns while
+                      staying within your defined risk parameters.
                     </p>
                   </div>
                 </li>
@@ -375,11 +403,11 @@ export const OurOfferings = ({
                   />
                   <div className="flex flex-col gap-1 mt-[-0.25rem]">
                     <h5 className="text-base text-gc_grey_800 font-bold lg:text-lg">
-                      With you every step of the way
+                      Alignment with Evolving Goals & Market Conditions
                     </h5>
                     <p className="text-sm text-gc_grey_300 font-normal leading-[1.5rem] lg:text-base lg:w-11/12 xl:w-9/12">
-                      Comprehensive planning services to help clients map out
-                      their goals and develop a roadmap to achieve them
+                      Portfolios are actively adjusted to reflect life changes,
+                      market shifts, and emerging opportunities.
                     </p>
                   </div>
                 </li>

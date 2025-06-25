@@ -17,18 +17,18 @@ export const EmpoweringSection = ({
 
   const stats = [
     {
-      name: "$100+ billion",
-      title: "In Assets Managed",
+      name: "₦100+ billion",
+      title: "Investment Portfolio",
       img: AssetManagedImg,
     },
     {
       name: "200+",
-      title: "In Assets Managed",
+      title: "Investment Portfolio",
       img: PremiumClientImg,
     },
     {
-      name: "$10+ billion",
-      title: "In Settlement paid",
+      name: "₦700+ million",
+      title: "Settlement Paid",
       img: SettlementImg,
     },
   ];

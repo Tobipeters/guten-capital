@@ -47,14 +47,14 @@ export const ProvenResult = ({
       className="container flex flex-col w-full gap-12 px-4 py-14 lg:py-20"
     >
       <motion.div className="w-full" variants={itemVariants}>
-        <h3 className="text-[2rem] text-gc_grey_800 font-bold leading-[2.4rem] lg:text-[3rem] xl:text-[3.5rem] xl:leading-[4.1rem]">
+        <h3 className="text-[2rem] text-gc_grey_800 font-bold leading-[2.4rem] mb-4 lg:text-[3rem] xl:text-[3.5rem] xl:leading-[4.1rem]">
           Trusted by investors.{" "}
           <span className="text-[#0E8216]"> Proven results.</span>
         </h3>
         <p className="text-sm text-gc_grey_400 font-normal leading-[1.5rem] lg:text-base lg:w-10/12 xl:w-7/12">
-          At Guten Capital Limited we offer a comprehensive range of services
-          meticulously tailored to meet the unique needs of both individuals and
-          institutional investors
+          At Guten, each service offering is powered by deep market insight,
+          data driven decision making and a commitment to long-term value
+          creation for both individuals and Institutional investors.
         </p>
       </motion.div>
 

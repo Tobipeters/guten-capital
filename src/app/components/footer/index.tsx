@@ -83,9 +83,10 @@ export const Footer = () => {
           </ul>
 
           <div className="inline-flex justify-center items-center">
-            <a href="mailto:gutencapital@gmai.com">gutencapital@gmai.com</a>
+            <a href="mailto:info@gutencapital.com">info@gutencapital.com</a>
             &nbsp; |&nbsp;
-            <a href="tel:2348121717629">+2348121717629</a>
+            {/* <a href="tel:2348121717629">+2348121717629</a> */}
+            <a>Trocadero Square, 5 Rock Drive, Unit 11, Lekki Phase 1, Lagos.</a>
           </div>
         </div>
 
