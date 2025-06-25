@@ -2,7 +2,7 @@ import CEO from "../../../../../public/images/CEO.png";
 import COO from "../../../../../public/images/COO.png";
 import CCO from "../../../../../public/images/CCO.png";
 import CTO from "../../../../../public/images/CTO.png";
-import Image from "next/image";
+// import Image from "next/image";
 
 export const MeetTheTeam = () => {
   const teams = [
